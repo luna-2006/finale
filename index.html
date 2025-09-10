@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electrical Properties Catalog</title>
+  <style>
+    /* (Include CSS from above) */
+  </style>
+</head>
+<body>
+  <h1>Electrical Components & Pricing</h1>
+  <div class="columns">
+    <!-- Repeat this block for each component -->
+    <ul class="price">
+      <li class="header">Transformer – 500 VA</li>
+      <li class="grey">₹ 2,500</li>
+      <li>Primary: 230 V</li>
+      <li>Secondary: 12 V</li>
+      <li class="grey"><a href="#" class="button" onclick="showDetails('transDetails')">More Specs</a></li>
+    </ul>
+  </div>
+  <div id="transDetails" style="display:none;">
+    <p>Frequency: 50 Hz</p>
+    <p>Efficiency: 95%</p>
+    <p>Weight: 1.2 kg</p>
+  </div>
+
+  <script>
+    function showDetails(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
